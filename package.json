@@ -7,7 +7,7 @@
     "yarn": "pnpmを使用してください"
   },
   "scripts": {
-    "check-code": "run-p -c lint",
+    "check-code": "run-p -c lint spell-check",
     "fix": "run-p -c \"fix:*\"",
     "fix:eslint": "eslint \"./\" --max-warnings 0 --fix",
     "fix:fixpack": "fixpack",
@@ -18,6 +18,7 @@
     "lint:prettier": "prettier \"./*.{json,toml,yaml,yml}\" \"!pnpm-lock.yaml\" \"!package.json\" -c -u",
     "prepare": "run-p \"prepare:*\"",
     "prepare:husky": "husky",
+    "spell-check": "cspell lint --no-progress \"./**/*.{js,mjs,cjs}\" \"./*.{js,mjs,cjs}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
