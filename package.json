@@ -3,6 +3,11 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
+    "check-code": "run-p -c lint",
+    "lint": "run-p -c \"lint:*\"",
+    "lint:fixpack": "fixpack --dryRun",
+    "fix": "run-p -c \"fix:*\"",
+    "fix:fixpack": "fixpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "run-p \"prepare:*\"",
     "prepare:husky": "husky"
