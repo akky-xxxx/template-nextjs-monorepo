@@ -10,8 +10,10 @@
     "check-code": "run-p -c lint",
     "fix": "run-p -c \"fix:*\"",
     "fix:fixpack": "fixpack",
+    "fix:prettier": "prettier \"./*.{json,toml,yaml,yml}\" \"!pnpm-lock.yaml\" \"!package.json\" -w -u",
     "lint": "run-p -c \"lint:*\"",
     "lint:fixpack": "fixpack --dryRun",
+    "lint:prettier": "prettier \"./*.{json,toml,yaml,yml}\" \"!pnpm-lock.yaml\" \"!package.json\" -c -u",
     "prepare": "run-p \"prepare:*\"",
     "prepare:husky": "husky",
     "test": "echo \"Error: no test specified\" && exit 1"
