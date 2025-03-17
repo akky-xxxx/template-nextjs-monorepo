@@ -29,6 +29,7 @@ export const CONFIG = [
   {
     files: ["config/eslint/**/*.mjs"],
     rules: {
+      "import/no-extraneous-dependencies": 0,
       "no-magic-numbers": 0,
     },
   },
