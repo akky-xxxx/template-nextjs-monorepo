@@ -11,6 +11,11 @@
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.6.3",
+  "engines": {
+    "node": "22.14.0",
+    "npm": "pnpmを使用してください",
+    "yarn": "pnpmを使用してください"
+  },
   "devDependencies": {
     "@commitlint/cli": "19.8.0",
     "@commitlint/config-conventional": "19.8.0",
