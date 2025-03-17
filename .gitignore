@@ -1,6 +1,7 @@
 *.tsbuildinfo
 .DS_Store
 .idea
+.turbo
 .vscode
 Thumbs.db
 node_modules
