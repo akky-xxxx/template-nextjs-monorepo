@@ -1,5 +1,11 @@
 export const CONFIG = [
   {
+    files: ["cspell.config.js"],
+    rules: {
+      "import/no-extraneous-dependencies": 0,
+    },
+  },
+  {
     files: ["commitlint.config.js"],
     rules: {
       "no-magic-numbers": 0,
