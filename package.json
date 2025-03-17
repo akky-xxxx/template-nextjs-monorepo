@@ -23,6 +23,7 @@
   "devDependencies": {
     "@commitlint/cli": "19.8.0",
     "@commitlint/config-conventional": "19.8.0",
+    "cspell": "8.17.5",
     "eslint": "9.22.0",
     "eslint-config-sc-all": "0.1.1",
     "eslint-config-sc-js": "0.1.2",
