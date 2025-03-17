@@ -1,0 +1,1 @@
+# Template next.js monorepo
