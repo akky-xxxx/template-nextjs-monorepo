@@ -24,7 +24,8 @@
     "fixpack": "4.0.0",
     "husky": "9.1.7",
     "npm-run-all2": "7.0.2",
-    "prettier": "3.5.3"
+    "prettier": "3.5.3",
+    "turbo": "2.4.4"
   },
   "license": "UNLICENSED",
   "packageManager": "pnpm@10.6.3"
