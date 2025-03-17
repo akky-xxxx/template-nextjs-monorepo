@@ -1,31 +1,29 @@
 {
   "name": "template-nextjs-monorepo",
   "version": "0.0.0",
-  "description": "",
-  "scripts": {
-    "check-code": "run-p -c lint",
-    "lint": "run-p -c \"lint:*\"",
-    "lint:fixpack": "fixpack --dryRun",
-    "fix": "run-p -c \"fix:*\"",
-    "fix:fixpack": "fixpack",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "run-p \"prepare:*\"",
-    "prepare:husky": "husky"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.6.3",
   "engines": {
     "node": "22.14.0",
     "npm": "pnpmを使用してください",
     "yarn": "pnpmを使用してください"
   },
+  "scripts": {
+    "check-code": "run-p -c lint",
+    "fix": "run-p -c \"fix:*\"",
+    "fix:fixpack": "fixpack",
+    "lint": "run-p -c \"lint:*\"",
+    "lint:fixpack": "fixpack --dryRun",
+    "prepare": "run-p \"prepare:*\"",
+    "prepare:husky": "husky",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "19.8.0",
     "@commitlint/config-conventional": "19.8.0",
     "fixpack": "4.0.0",
     "husky": "9.1.7",
     "npm-run-all2": "7.0.2"
-  }
+  },
+  "license": "UNLICENSED",
+  "packageManager": "pnpm@10.6.3"
 }
