@@ -1,29 +1,28 @@
 {
   "name": "client-screen",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
-    "dev": "npm-run-all \"gen:*\" -p \"watch:*\"",
     "build": "next build",
-    "watch:build": "next dev --turbopack",
-    "watch:css": "hcm \"./src/**/*.css\" -W",
-    "gen:css": "hcm \"./src/**/*.css\"",
-    "start": "next start",
+    "build-storybook": "storybook build",
     "check-code": "run-p -c lint spell-check",
+    "dev": "npm-run-all \"gen:*\" -p \"watch:*\"",
     "fix": "run-p -c \"fix:*\"",
     "fix:eslint-other-than-src": "eslint -c ./eslint.config.other-than-src.mjs \"./\" --max-warnings 0 --fix",
     "fix:eslint-src": "eslint \"./src/\" --max-warnings 0 --fix",
     "fix:fixpack": "fixpack",
     "fix:prettier": "prettier \"./*.{json,toml,yaml,yml}\" \"!pnpm-lock.yaml\" \"!package.json\" -w -u",
+    "gen:css": "hcm \"./src/**/*.css\"",
     "lint": "run-p -c \"lint:*\"",
     "lint:eslint-other-than-src": "eslint -c ./eslint.config.other-than-src.mjs \"./\" --max-warnings 0",
     "lint:eslint-src": "eslint \"./src/\" --max-warnings 0",
     "lint:fixpack": "fixpack --dryRun",
     "lint:prettier": "prettier \"./*.{json,toml,yaml,yml}\" \"!pnpm-lock.yaml\" \"!package.json\" -c -u",
     "spell-check": "cspell lint --no-progress \"./**/*.{js,mjs,cjs}\" \"./*.{js,mjs,cjs}\"",
-    "type-check": "tsc",
+    "start": "next start",
     "storybook": "storybook dev -p 3050",
-    "build-storybook": "storybook build"
+    "type-check": "tsc",
+    "watch:build": "next dev --turbopack",
+    "watch:css": "hcm \"./src/**/*.css\" -W"
   },
   "dependencies": {
     "next": "15.2.2",
@@ -70,5 +69,6 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
-  }
+  },
+  "private": true
 }
