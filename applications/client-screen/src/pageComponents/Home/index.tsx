@@ -1,8 +1,10 @@
+import { Fragment } from "react"
+
 import { SampleServerComponent } from "@/serverComponents/SampleServerComponent"
 
 export const Home = () => (
-  <React.Fragment>
+  <Fragment>
     <h1>Home as temporary</h1>
     <SampleServerComponent />
-  </React.Fragment>
+  </Fragment>
 )
