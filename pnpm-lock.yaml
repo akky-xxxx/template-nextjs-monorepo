@@ -58,28 +58,28 @@ importers:
         version: 19.0.0(react@19.0.0)
     devDependencies:
       '@chromatic-com/storybook':
-        specifier: ^3
+        specifier: 3.2.6
         version: 3.2.6(react@19.0.0)(storybook@8.6.7(prettier@3.5.3))
       '@storybook/addon-essentials':
-        specifier: ^8.6.7
+        specifier: 8.6.7
         version: 8.6.7(@types/react@19.0.10)(storybook@8.6.7(prettier@3.5.3))
       '@storybook/addon-onboarding':
-        specifier: ^8.6.7
+        specifier: 8.6.7
         version: 8.6.7(storybook@8.6.7(prettier@3.5.3))
       '@storybook/blocks':
-        specifier: ^8.6.7
+        specifier: 8.6.7
         version: 8.6.7(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.6.7(prettier@3.5.3))
       '@storybook/experimental-addon-test':
-        specifier: ^8.6.7
+        specifier: 8.6.7
         version: 8.6.7(@vitest/browser@3.0.9)(@vitest/runner@3.0.9)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.6.7(prettier@3.5.3))(vitest@3.0.9)
       '@storybook/experimental-nextjs-vite':
         specifier: 8.6.7
         version: 8.6.7(@babel/core@7.26.10)(@storybook/test@8.6.7(storybook@8.6.7(prettier@3.5.3)))(next@15.2.2(@babel/core@7.26.10)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(rollup@4.36.0)(storybook@8.6.7(prettier@3.5.3))(typescript@5.8.2)(vite@6.2.2(@types/node@22.13.10)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0))
       '@storybook/react':
-        specifier: ^8.6.7
+        specifier: 8.6.7
         version: 8.6.7(@storybook/test@8.6.7(storybook@8.6.7(prettier@3.5.3)))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.6.7(prettier@3.5.3))(typescript@5.8.2)
       '@storybook/test':
-        specifier: ^8.6.7
+        specifier: 8.6.7
         version: 8.6.7(storybook@8.6.7(prettier@3.5.3))
       '@tsconfig/next':
         specifier: 2.0.3
@@ -148,7 +148,7 @@ importers:
         specifier: 3.5.3
         version: 3.5.3
       storybook:
-        specifier: ^8.6.7
+        specifier: 8.6.7
         version: 8.6.7(prettier@3.5.3)
       template-nextjs-monorepo:
         specifier: workspace:*
