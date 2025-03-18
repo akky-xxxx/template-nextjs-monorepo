@@ -14,6 +14,7 @@ export const CONFIG = [
   {
     files: [
       "eslint.config.mjs",
+      "eslint.config.other-than-src.mjs",
     ],
     rules: {
       "import/extensions": [
@@ -24,6 +25,7 @@ export const CONFIG = [
       ],
       "import/no-default-export": 0,
       "import/no-extraneous-dependencies": 0,
+      "unicorn/prevent-abbreviations": 0,
     },
   },
   {
