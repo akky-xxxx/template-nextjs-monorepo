@@ -1,3 +1,5 @@
+import { MswProvider } from "@/modules/MswProvider"
+
 import type { Metadata } from "next"
 import type { ReactNode } from "react"
 
@@ -9,7 +11,9 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: ReactNode }) => (
   <html lang="en">
     <body>
-      {children}
+      <MswProvider>
+        {children}
+      </MswProvider>
     </body>
   </html>
 )
