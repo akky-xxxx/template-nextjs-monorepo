@@ -7,7 +7,7 @@ export const GET = async (request: NextRequest) => {
   const requestSearchParameters = new URLSearchParams()
   if (numberQueryValue !== null && numberQueryValue !== "") requestSearchParameters.set("numberFromBff", numberQueryValue)
 
-  const requestUrl = `http://localhost:3010/api/be-even-odd?${requestSearchParameters.toString()}`
+  const requestUrl = `http://localhost:3100/api/be-even-odd?${requestSearchParameters.toString()}`
   const result = await fetch(requestUrl)
     .then((response) => response.json())
     // TODO: api 周りの型を整備したら不要になる
