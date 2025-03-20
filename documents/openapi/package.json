@@ -3,5 +3,14 @@
   "version": "0.1.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@stoplight/prism-cli": "5.12.0",
+    "@stoplight/spectral-cli": "6.14.3",
+    "cspell": "8.17.5",
+    "fixpack": "4.0.0",
+    "npm-run-all2": "7.0.2",
+    "prettier": "3.5.3",
+    "swagger-merger": "1.5.4"
   }
 }
