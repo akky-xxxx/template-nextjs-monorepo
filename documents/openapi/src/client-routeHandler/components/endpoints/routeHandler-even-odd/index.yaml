@@ -1,0 +1,9 @@
+title: index
+x-stoplight:
+  id: 3xmr4arn9bl86
+type: string
+enum:
+  - even
+  - odd
+  - NaN
+description: "query param の値が数字であれば even, odd の別を返す。数字でなければ NaN を返す"

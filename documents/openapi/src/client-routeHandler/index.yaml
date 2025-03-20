@@ -1,0 +1,38 @@
+openapi: 3.1.0
+x-stoplight:
+  id: zsjilh6i0lm4c
+info:
+  title: client-routeHandler
+  version: "1.0"
+  description: for client routeHandler
+  contact:
+    name: contact
+    url: "https://github.com/akky-xxxx/template-nextjs-monorepo"
+servers:
+  - url: "http://localhost:3010"
+paths:
+  /api/routeHandler-even-odd:
+    get:
+      summary: Your GET endpoint
+      tags:
+        - default
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: ./components/endpoints/routeHandler-even-odd/index.yaml
+      operationId: get-api-routeHandler-even-odd
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: numberFromFront
+          required: true
+      description: "query param の値が数字であれば even, odd の別を返す。数字でなければ NaN を返す"
+components:
+  schemas: {}
+tags:
+  - name: default
+    description: 取り急ぎ
