@@ -19,7 +19,9 @@
     "prepare": "run-p \"prepare:*\"",
     "prepare:husky": "husky",
     "spell-check": "cspell lint --no-progress \"./**/*.{js,mjs,cjs}\" \"./*.{js,mjs,cjs}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "turbo:check-code": "turbo check-code",
+    "ws:check-code": "run-p check-code turbo:check-code"
   },
   "devDependencies": {
     "@commitlint/cli": "19.8.0",
