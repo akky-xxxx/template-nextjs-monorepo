@@ -1,22 +1,20 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import { getApiBeEvenOdd } from "@/libs/apiClient/client-backend"
+
+import type { GetApiRouteHandlerEvenOddParams } from "@/libs/model/client-routeHandler"
 import type { NextRequest } from "next/server"
 
 export const GET = async (request: NextRequest) => {
   const { searchParams: requestedSearchParameters } = request.nextUrl
-  const numberQueryValue = requestedSearchParameters.get("numberFromFront")
-  const requestSearchParameters = new URLSearchParams()
-  if (numberQueryValue !== null && numberQueryValue !== "") requestSearchParameters.set("numberFromBff", numberQueryValue)
+  const numberQueryValue = requestedSearchParameters.get("numberFromFront" satisfies keyof GetApiRouteHandlerEvenOddParams)
 
-  const requestUrl = `http://localhost:3100/api/be-even-odd?${requestSearchParameters.toString()}`
-  const result = await fetch(requestUrl)
-    .then((response) => response.json())
-    // TODO: api 周りの型を整備したら不要になる
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-member-access
-    .then((data) => data.result)
-    .catch((error: unknown) => {
-      // eslint-disable-next-line no-console
-      console.error(error)
-      return "error"
-    })
-  return Response.json(result)
+  if (numberQueryValue === null) return Response.json("error")
+
+  try {
+    const { data } = await getApiBeEvenOdd({ numberFromRouteHandler: numberQueryValue })
+    return Response.json(data)
+  } catch (error: unknown) {
+    // eslint-disable-next-line no-console
+    console.error(error)
+    return Response.json("error")
+  }
 }
