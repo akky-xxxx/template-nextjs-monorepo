@@ -23,7 +23,7 @@
     "spell-check": "cspell lint --no-progress \"./**/*.{js,mjs,cjs}\" \"./*.{js,mjs,cjs}\"",
     "start": "next start",
     "storybook": "storybook dev -p 3050",
-    "test:storybook": "test-storybook --url http://localhost:3050",
+    "test:vitest": "vitest run",
     "type-check": "tsc",
     "watch:build": "next dev --turbopack",
     "watch:css": "hcm \"./src/**/*.css\" -W"
