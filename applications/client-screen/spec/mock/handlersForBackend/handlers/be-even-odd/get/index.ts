@@ -24,20 +24,14 @@ export const beEvenOddGet = http[METHOD](MOCK_TARGET, ({ request }) => {
         action: "response",
         data: { numberQueryValue },
       })
-      return HttpResponse.json({
-        isSuccess: true,
-        result: "NaN" satisfies GetApiBeEvenOdd200,
-      })
+      return HttpResponse.json("NaN" satisfies GetApiBeEvenOdd200)
     }
     const result: GetApiBeEvenOdd200 = Number(numberQueryValue) % 2 === 0 ? "even" : "odd"
     outputLog({
       action: "request",
       data: result,
     })
-    return HttpResponse.json({
-      isSuccess: true,
-      result,
-    })
+    return HttpResponse.json(result)
   } catch (error: unknown) {
     outputLog({
       action: "internal server error",
