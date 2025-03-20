@@ -23,6 +23,19 @@ paths:
             application/json:
               schema:
                 $ref: ./components/endpoints/be-even-odd/get/SuccessResponse.yaml
+              examples:
+                NaN pattern:
+                  value:
+                    responseData:
+                      judgementResult: NaN
+                even pattern:
+                  value:
+                    responseData:
+                      judgementResult: even
+                odd pattern:
+                  value:
+                    responseData:
+                      judgementResult: NaN
       operationId: get-api-be-even-odd
       parameters:
         - schema:
