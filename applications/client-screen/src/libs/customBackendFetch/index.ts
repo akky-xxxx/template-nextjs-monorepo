@@ -19,10 +19,9 @@ const HOST = process.env["BACKEND_API_HOST"] ?? "http://localhost:3100"
 
 // NOTE: Update just base url
 const getUrl = (contextUrl: string): string => {
-  const url = new URL(contextUrl);
+  const url = new URL(`${HOST}${contextUrl}`);
   const pathname = url.pathname;
   const search = url.search;
-
   const requestUrl = new URL(`${HOST}${pathname}${search}`);
 
   return requestUrl.toString();
