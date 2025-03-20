@@ -2,8 +2,13 @@ module.exports = {
   "client-backend": {
     input: "../../documents/openapi/dist/client-backend.yaml",
     output: {
-      baseUrl: "http://localhost:3100/",
       client: "fetch",
+      override: {
+        mutator: {
+          name: "customBackendFetch",
+          path: "./src/libs/customBackendFetch/index.ts",
+        },
+      },
       schemas: "./src/libs/model/client-backend",
       target: "./src/libs/apiClient/client-backend.ts",
     },
