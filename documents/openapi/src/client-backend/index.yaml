@@ -22,7 +22,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: ./components/endpoints/be-even-odd/index.yaml
+                $ref: ./components/endpoints/be-even-odd/get/SuccessResponse.yaml
       operationId: get-api-be-even-odd
       parameters:
         - schema:
