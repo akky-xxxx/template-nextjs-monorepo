@@ -1,5 +1,6 @@
 import { http, HttpResponse } from "msw"
 
+import { getResponseRoot } from "../../../../shared/modules/getResponseRoot"
 import { logger } from "../../../../shared/modules/logger"
 import { HOST_PREFIX } from "../../../constants/HOST_PREFIX"
 
@@ -33,14 +34,14 @@ export const beEvenOddGet = http[METHOD]<
         action: "response",
         data: { numberQueryValue },
       })
-      return HttpResponse.json("NaN")
+      return HttpResponse.json(getResponseRoot(({ judgementResult: "NaN" })))
     }
-    const result: GetApiBeEvenOdd200 = Number(numberQueryValue) % 2 === 0 ? "even" : "odd"
+    const result: GetApiBeEvenOdd200["responseData"]["judgementResult"] = Number(numberQueryValue) % 2 === 0 ? "even" : "odd"
     outputLog({
       action: "request",
       data: result,
     })
-    return HttpResponse.json(result)
+    return HttpResponse.json(getResponseRoot(({ judgementResult: result })))
   } catch (error: unknown) {
     outputLog({
       action: "internal server error",
