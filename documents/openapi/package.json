@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "build": "run-p \"build:*\"",
+    "build:client-backend": "swagger-merger -i \"./src/client-backend/index.yaml\" -o ./dist/client-backend.yaml",
     "build:client-routeHandler": "swagger-merger -i \"./src/client-routeHandler/index.yaml\" -o ./dist/client-routeHandler.yaml",
     "check-code": "run-p lint spell-check",
     "fix": "run-p \"fix:*\" -c",
@@ -15,6 +16,7 @@
     "lint:pack": "fixpack --dryRun",
     "lint:prettier": "prettier \"./*.{js,md,yaml,yml}\" \"./src/**/*.{yaml,yml}\" --check --cache",
     "mock": "run-s mock:prepare mock:run",
+    "mock-run:client-backend": "prism mock ./dist/client-backend.yaml -p 3010",
     "mock-run:client-routeHandler": "prism mock ./dist/client-routeHandler.yaml -p 3010",
     "mock:prepare": "yarn build",
     "mock:run": "run-p \"mock-run:*\"",
