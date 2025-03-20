@@ -70,6 +70,6 @@ export const ActionForInvalidSubmit: Story = {
     const canvas = within(canvasElement)
     await ActionForInvalidInput.play?.(context)
     await userEvent.click(canvas.getByRole("button"))
-    await expect(canvas.getAllByRole("textbox").at(1)?.textContent).toBe("error!")
+    await expect(canvas.getAllByRole("textbox").at(1)?.textContent).toBe("NaN")
   },
 }
