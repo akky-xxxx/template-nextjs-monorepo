@@ -25,6 +25,8 @@
     "spell-check": "cspell lint --no-progress \"./**/*.{js,mjs,cjs}\" \"./*.{js,mjs,cjs}\"",
     "start": "next start",
     "storybook": "storybook dev -p 3050",
+    "test": "run-s \"test:*\"",
+    "test:jest": "jest --coverage",
     "test:vitest": "vitest run",
     "type-check": "tsc",
     "watch:build": "next dev --turbopack",
