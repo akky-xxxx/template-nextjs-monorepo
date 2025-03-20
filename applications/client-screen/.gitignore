@@ -46,3 +46,6 @@ next-env.d.ts
 # happy css module
 src/**/*.css.d.ts
 src/**/*.css.d.ts.map
+
+# lib
+src/libs/
