@@ -2,7 +2,23 @@
   "name": "openapi",
   "version": "0.1.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "run-p \"build:*\"",
+    "build:client-routeHandler": "swagger-merger -i \"./src/client-routeHandler/index.yaml\" -o ./dist/client-routeHandler.yaml",
+    "check-code": "run-p lint spell-check",
+    "fix": "run-p \"fix:*\" -c",
+    "fix:pack": "fixpack",
+    "fix:prettier": "prettier \"./*.{js,md,yaml,yml}\" \"./src/**/*.{yaml,yml}\" --write --cache",
+    "lint": "run-p \"lint:*\" -c",
+    "lint-openapi-prepare": "yarn build",
+    "lint-openapi-run": "spectral lint ./dist/*.yaml -F=warn",
+    "lint:openapi": "run-s lint-openapi-prepare lint-openapi-run",
+    "lint:pack": "fixpack --dryRun",
+    "lint:prettier": "prettier \"./*.{js,md,yaml,yml}\" \"./src/**/*.{yaml,yml}\" --check --cache",
+    "mock": "run-s mock:prepare mock:run",
+    "mock-run:client-routeHandler": "prism mock ./dist/client-routeHandler.yaml -p 3010",
+    "mock:prepare": "yarn build",
+    "mock:run": "run-p \"mock-run:*\"",
+    "spell-check": "cspell lint --no-progress \"./**/*.{yaml,yml,md}\" \"./*.{yaml,yml,md}\""
   },
   "devDependencies": {
     "@stoplight/prism-cli": "5.12.0",
