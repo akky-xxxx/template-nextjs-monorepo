@@ -1,9 +1,25 @@
 title: 'Success response of GET:be-even-odd'
 x-stoplight:
   id: v575yvkseviq5
-type: string
-enum:
-  - even
-  - odd
-  - NaN
-description: "query param の値が数字であれば even, odd の別を返す。数字でなければ NaN を返す"
+type: object
+description: 'query param の値が数字であれば even, odd の別を返す。数字でなければ NaN を返す'
+additionalProperties: false
+properties:
+  response_data:
+    type: object
+    x-stoplight:
+      id: o9ug812f6hdtl
+    additionalProperties: false
+    required:
+      - judgement_result
+    properties:
+      judgement_result:
+        type: string
+        x-stoplight:
+          id: x5sfwohco1dr1
+        enum:
+          - NaN
+          - even
+          - odd
+required:
+  - response_data
