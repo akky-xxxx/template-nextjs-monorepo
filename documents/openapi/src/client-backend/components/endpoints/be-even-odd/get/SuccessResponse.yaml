@@ -5,15 +5,15 @@ type: object
 description: 'query param の値が数字であれば even, odd の別を返す。数字でなければ NaN を返す'
 additionalProperties: false
 properties:
-  response_data:
+  responseData:
     type: object
     x-stoplight:
       id: o9ug812f6hdtl
     additionalProperties: false
     required:
-      - judgement_result
+      - judgementResult
     properties:
-      judgement_result:
+      judgementResult:
         type: string
         x-stoplight:
           id: x5sfwohco1dr1
@@ -22,4 +22,4 @@ properties:
           - even
           - odd
 required:
-  - response_data
+  - responseData
