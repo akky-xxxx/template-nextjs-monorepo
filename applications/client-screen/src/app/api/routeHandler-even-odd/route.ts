@@ -11,7 +11,7 @@ export const GET = async (request: NextRequest) => {
 
   try {
     const { data } = await getApiBeEvenOdd({ numberFromRouteHandler: numberQueryValue })
-    return Response.json(data)
+    return Response.json(data.responseData.judgementResult)
   } catch (error: unknown) {
     // eslint-disable-next-line no-console
     console.error(error)
