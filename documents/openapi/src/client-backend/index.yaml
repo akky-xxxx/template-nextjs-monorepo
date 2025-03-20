@@ -3,13 +3,13 @@ x-stoplight:
   id: 2is4sg4de04re
 info:
   title: client-backend
-  version: "1.0"
+  version: '1.0'
   description: for client backend
   contact:
     name: contact
-    url: "https://github.com/akky-xxxx/template-nextjs-monorepo"
+    url: 'https://github.com/akky-xxxx/template-nextjs-monorepo'
 servers:
-  - url: "http://localhost:3110"
+  - url: 'http://localhost:3110'
 paths:
   /api/be-even-odd:
     get:
@@ -17,7 +17,7 @@ paths:
       tags:
         - default
       responses:
-        "200":
+        '200':
           description: OK
           content:
             application/json:
@@ -30,7 +30,7 @@ paths:
           in: query
           name: numberFromRouteHandler
           required: true
-      description: "query param の値が数字であれば even, odd の別を返す。数字でなければ NaN を返す"
+      description: 'query param の値が数字であれば even, odd の別を返す。数字でなければ NaN を返す'
 components:
   schemas: {}
 tags:

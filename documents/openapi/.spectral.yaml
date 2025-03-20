@@ -1,8 +1,8 @@
-extends: ["spectral:oas", "spectral:asyncapi", "spectral:arazzo"]
+extends: ['spectral:oas', 'spectral:asyncapi', 'spectral:arazzo']
 rules:
   openapi-paths-alphabetical:
     description: Paths must have alphabetical fields
-    message: "{{error}}"
+    message: '{{error}}'
     recommended: true
     severity: error
     given: $
@@ -11,7 +11,7 @@ rules:
         function: alphabetical
   openapi-properties-alphabetical:
     description: OpenAPI schema object must have alphabetical fields
-    message: "{{error}}"
+    message: '{{error}}'
     recommended: true
     severity: error
     given: $..schema..

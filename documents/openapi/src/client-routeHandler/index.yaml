@@ -3,13 +3,13 @@ x-stoplight:
   id: zsjilh6i0lm4c
 info:
   title: client-routeHandler
-  version: "1.0"
+  version: '1.0'
   description: for client routeHandler
   contact:
     name: contact
-    url: "https://github.com/akky-xxxx/template-nextjs-monorepo"
+    url: 'https://github.com/akky-xxxx/template-nextjs-monorepo'
 servers:
-  - url: "http://localhost:3010"
+  - url: 'http://localhost:3010'
 paths:
   /api/routeHandler-even-odd:
     get:
@@ -17,7 +17,7 @@ paths:
       tags:
         - default
       responses:
-        "200":
+        '200':
           description: OK
           content:
             application/json:
@@ -30,7 +30,7 @@ paths:
           in: query
           name: numberFromFront
           required: true
-      description: "query param の値が数字であれば even, odd の別を返す。数字でなければ NaN を返す"
+      description: 'query param の値が数字であれば even, odd の別を返す。数字でなければ NaN を返す'
 components:
   schemas: {}
 tags:
