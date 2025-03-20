@@ -3,9 +3,13 @@ import { http, HttpResponse } from "msw"
 import { logger } from "../../../../shared/modules/logger"
 import { PREFIX } from "../../../constants/PREFIX"
 
+import type { WithoutPathParameter } from "../../../../shared/types/WithoutPathParameter"
+import type { WithoutRequestBody } from "../../../../shared/types/WithoutRequestBody"
+import type { getGetApiRouteHandlerEvenOddUrl } from "@/libs/apiClient/client-routeHandler"
 import type { GetApiRouteHandlerEvenOdd200, GetApiRouteHandlerEvenOddParams } from "@/libs/model/client-routeHandler"
 
-const MOCK_TARGET = `${PREFIX}/routeHandler-even-odd`
+type Endpoint = ReturnType<typeof getGetApiRouteHandlerEvenOddUrl>
+const MOCK_TARGET = `${PREFIX}/routeHandler-even-odd` satisfies Endpoint
 const METHOD = "get"
 
 const outputLog = logger({
@@ -13,7 +17,12 @@ const outputLog = logger({
   mockTarget: MOCK_TARGET,
 })
 
-export const routeHandlerEvenOddGet = http[METHOD](MOCK_TARGET, ({ request }) => {
+export const routeHandlerEvenOddGet = http[METHOD]<
+  WithoutPathParameter,
+  WithoutRequestBody,
+  GetApiRouteHandlerEvenOdd200,
+  Endpoint
+>(MOCK_TARGET, ({ request }) => {
   outputLog({
     action: "request",
   })
@@ -27,11 +36,10 @@ export const routeHandlerEvenOddGet = http[METHOD](MOCK_TARGET, ({ request }) =>
         action: "bad request",
         data: { numberQueryValue },
       })
-      const responseValue: GetApiRouteHandlerEvenOdd200 = "NaN"
-      return new HttpResponse(responseValue)
+      return HttpResponse.json("NaN")
     }
 
-    const result: GetApiRouteHandlerEvenOdd200 = Number(numberQueryValue) % 2 === 0 ? "even" : "odd"
+    const result = Number(numberQueryValue) % 2 === 0 ? "even" : "odd"
     outputLog({
       action: "response",
       data: result,
