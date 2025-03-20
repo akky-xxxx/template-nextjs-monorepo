@@ -1,0 +1,15 @@
+{
+  "sortToTop": [
+    "name",
+    "version",
+    "scripts",
+    "devDependencies"
+  ],
+  "required": [
+    "name",
+    "version",
+    "scripts",
+    "devDependencies"
+  ],
+  "warn": []
+}
