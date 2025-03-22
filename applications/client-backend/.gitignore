@@ -1,3 +1,2 @@
 # lib
-src/libs/model
-src/libs/zodSchema
+src/libs/apiSchema
