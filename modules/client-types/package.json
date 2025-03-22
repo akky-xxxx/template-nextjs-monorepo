@@ -17,6 +17,7 @@
     "type-check": "tsc"
   },
   "devDependencies": {
+    "@tsconfig/strictest": "2.0.5",
     "@types/react": "19.0.10",
     "cspell": "8.17.5",
     "eslint": "9.22.0",
