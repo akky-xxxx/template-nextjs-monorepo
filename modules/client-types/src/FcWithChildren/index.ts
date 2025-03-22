@@ -1,3 +1,3 @@
-import type { FC } from "react"
+import type { FC, PropsWithChildren } from "react"
 
-export type FcWithChildren<P = Record<string, unknown>> = FC<P>
+export type FcWithChildren<P = Record<string, unknown>> = FC<PropsWithChildren<P>>
