@@ -1,0 +1,13 @@
+{
+  "extends": ["@tsconfig/strictest"],
+  "compilerOptions": {
+    "downlevelIteration": true,
+    "module": "NodeNext",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "target": "ES2017"
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
+}
