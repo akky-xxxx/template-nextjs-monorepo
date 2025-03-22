@@ -284,6 +284,8 @@ importers:
         specifier: 1.5.4
         version: 1.5.4
 
+  modules/common-types: {}
+
 packages:
 
   '@adobe/css-tools@4.4.2':
