@@ -4,8 +4,6 @@ import { getResponseRoot } from "../../../../shared/modules/getResponseRoot"
 import { logger } from "../../../../shared/modules/logger"
 import { HOST_PREFIX } from "../../../constants/HOST_PREFIX"
 
-import type { WithoutPathParameter } from "../../../../shared/types/WithoutPathParameter"
-import type { WithoutRequestBody } from "../../../../shared/types/WithoutRequestBody"
 import type { getGetApiBeEvenOddUrl } from "@/libs/apiClient/client-backend"
 import type { GetApiBeEvenOdd200, GetApiBeEvenOddParams } from "@/libs/model/client-backend"
 
@@ -18,12 +16,7 @@ const outputLog = logger({
   mockTarget: MOCK_TARGET,
 })
 
-export const beEvenOddGet = http[METHOD]<
-  WithoutPathParameter,
-  WithoutRequestBody,
-  GetApiBeEvenOdd200,
-  Endpoint
->(MOCK_TARGET, ({ request }) => {
+export const beEvenOddGet = http[METHOD](MOCK_TARGET, ({ request }) => {
   outputLog({
     action: "request",
   })
@@ -34,14 +27,14 @@ export const beEvenOddGet = http[METHOD]<
         action: "response",
         data: { numberQueryValue },
       })
-      return HttpResponse.json(getResponseRoot(({ judgementResult: "NaN" })))
+      return HttpResponse.json<GetApiBeEvenOdd200>(getResponseRoot(({ judgementResult: "NaN" })))
     }
     const result: GetApiBeEvenOdd200["responseData"]["judgementResult"] = Number(numberQueryValue) % 2 === 0 ? "even" : "odd"
     outputLog({
       action: "request",
       data: result,
     })
-    return HttpResponse.json(getResponseRoot(({ judgementResult: result })))
+    return HttpResponse.json<GetApiBeEvenOdd200>(getResponseRoot(({ judgementResult: result })))
   } catch (error: unknown) {
     outputLog({
       action: "internal server error",
