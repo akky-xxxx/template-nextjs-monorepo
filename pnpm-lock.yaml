@@ -57,12 +57,21 @@ importers:
         specifier: 3.24.2
         version: 3.24.2
     devDependencies:
+      '@swc/core':
+        specifier: 1.11.11
+        version: 1.11.11(@swc/helpers@0.5.15)
+      '@swc/jest':
+        specifier: 0.2.37
+        version: 0.2.37(@swc/core@1.11.11(@swc/helpers@0.5.15))
       '@tsconfig/node22':
         specifier: 22.0.0
         version: 22.0.0
       '@tsconfig/strictest':
         specifier: 2.0.5
         version: 2.0.5
+      '@types/jest':
+        specifier: 29.5.14
+        version: 29.5.14
       cspell:
         specifier: 8.17.5
         version: 8.17.5
@@ -9929,15 +9938,6 @@ snapshots:
     optionalDependencies:
       source-map: 0.6.1
 
-  eslint-config-airbnb-base@15.0.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.26.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2)))(eslint@9.22.0(jiti@2.4.2)):
-    dependencies:
-      confusing-browser-globals: 1.0.11
-      eslint: 9.22.0(jiti@2.4.2)
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.26.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2))
-      object.assign: 4.1.7
-      object.entries: 1.1.9
-      semver: 6.3.1
-
   eslint-config-airbnb-base@15.0.0(eslint-plugin-import@2.31.0(eslint@9.22.0(jiti@2.4.2)))(eslint@9.22.0(jiti@2.4.2)):
     dependencies:
       confusing-browser-globals: 1.0.11
@@ -9967,19 +9967,6 @@ snapshots:
       - '@typescript-eslint/eslint-plugin'
       - eslint
       - jest
-      - supports-color
-      - typescript
-
-  eslint-config-sc-js@0.1.2(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.26.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2)))(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2):
-    dependencies:
-      '@eslint/eslintrc': 3.3.0
-      '@eslint/js': 9.22.0
-      '@stylistic/eslint-plugin': 2.13.0(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
-      eslint-config-airbnb-base: 15.0.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.26.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2)))(eslint@9.22.0(jiti@2.4.2))
-      eslint-plugin-unicorn: 56.0.1(eslint@9.22.0(jiti@2.4.2))
-    transitivePeerDependencies:
-      - eslint
-      - eslint-plugin-import
       - supports-color
       - typescript
 
@@ -10035,7 +10022,7 @@ snapshots:
     dependencies:
       '@eslint/eslintrc': 3.3.0
       '@eslint/js': 9.22.0
-      eslint-config-sc-js: 0.1.2(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.26.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2)))(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
+      eslint-config-sc-js: 0.1.2(eslint-plugin-import@2.31.0(eslint@9.22.0(jiti@2.4.2)))(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
       eslint-import-resolver-typescript: 3.9.1(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.26.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.22.0(jiti@2.4.2)))(eslint@9.22.0(jiti@2.4.2))
       typescript-eslint: 8.26.1(eslint@9.22.0(jiti@2.4.2))(typescript@5.8.2)
     transitivePeerDependencies:
