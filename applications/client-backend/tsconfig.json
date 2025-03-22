@@ -1,0 +1,13 @@
+{
+  "extends": ["@tsconfig/strictest", "@tsconfig/node-ts", "@tsconfig/node22"],
+  "compilerOptions": {
+    "downlevelIteration": true,
+    "noEmit": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "target": "ES2017"
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
+}

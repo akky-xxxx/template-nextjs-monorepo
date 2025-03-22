@@ -3,7 +3,25 @@
   "type": "module",
   "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "check-code": "run-p -c lint spell-check",
+    "fix": "run-p -c \"fix:*\"",
+    "fix:eslint-other-than-src": "eslint -c ./eslint.config.other-than-src.mjs \"./{,.storybook/}*{js,ts,mjs,mts,cjs,cts}\" --max-warnings 0 --fix",
+    "fix:eslint-src": "eslint \"./src/\" --max-warnings 0 --fix",
+    "fix:fixpack": "fixpack",
+    "fix:prettier": "prettier \"./*.{json,toml,yaml,yml}\" \"!pnpm-lock.yaml\" \"!package.json\" -w -u",
+    "gen:openapi": "run-s gen:openapi:openapi gen:openapi:orval",
+    "gen:openapi:openapi": "pnpm -F \"openapi\" build",
+    "gen:openapi:orval": "orval",
+    "lint": "run-p -c \"lint:*\"",
+    "lint:eslint-other-than-src": "eslint -c ./eslint.config.other-than-src.mjs \"./{,.storybook/}*{js,ts,mjs,mts,cjs,cts}\" --max-warnings 0",
+    "lint:eslint-src": "eslint \"./src/\" --max-warnings 0",
+    "lint:fixpack": "fixpack --dryRun",
+    "lint:prettier": "prettier \"./*.{json,toml,yaml,yml}\" \"!pnpm-lock.yaml\" \"!package.json\" -c -u",
+    "prepare": "run-p \"prepare:*\"",
+    "prepare:gen": "run-p \"gen:*\"",
+    "spell-check": "cspell lint --no-progress \"./**/*.{js,mjs,cjs,ts}\" \"./*.{js,mjs,cjs}\"",
+    "test": "jest --coverage",
+    "type-check": "tsc"
   },
   "devDependencies": {
     "@tsconfig/node-ts": "23.6.0",
