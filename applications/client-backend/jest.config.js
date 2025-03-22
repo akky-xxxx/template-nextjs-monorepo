@@ -1,6 +1,9 @@
 module.exports = {
   coveragePathIgnorePatterns: ["libs/"],
-  roots: ["<rootDir>/src"],
+  moduleNameMapper: {
+    "^@/(.+)": "<rootDir>/src/$1",
+  },
+  roots: ["<rootDir>/spec", "<rootDir>/src"],
   testMatch: ["**/?(*.)test.(ts|js)?"],
   testTimeout: 20_000,
   transform: {
