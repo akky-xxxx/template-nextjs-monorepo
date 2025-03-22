@@ -25,6 +25,7 @@
     "spell-check": "cspell lint --no-progress \"./**/*.{js,mjs,cjs}\" \"./*.{js,mjs,cjs}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "turbo:check-code": "turbo check-code",
+    "turbo:dev": "turbo dev",
     "ws:check-code": "run-p check-code turbo:check-code"
   },
   "devDependencies": {
