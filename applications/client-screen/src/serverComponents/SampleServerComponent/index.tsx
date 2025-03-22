@@ -1,3 +1,5 @@
 import styles from "./index.module.css"
 
-export const SampleServerComponent = () => <div className={styles.root}>a</div>
+import type { FcWithChildren } from "client-types"
+
+export const SampleServerComponent: FcWithChildren = () => <div className={styles.root}>a</div>
