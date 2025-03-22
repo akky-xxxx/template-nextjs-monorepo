@@ -3,5 +3,16 @@
   "version": "1.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "cspell": "8.17.5",
+    "eslint": "9.22.0",
+    "eslint-config-sc-all": "0.1.1",
+    "eslint-config-sc-ts": "0.1.1",
+    "fixpack": "4.0.0",
+    "npm-run-all2": "7.0.2",
+    "prettier": "3.5.3",
+    "template-nextjs-monorepo": "workspace:*",
+    "typescript": "5.8.2"
   }
 }
