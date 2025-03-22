@@ -4,7 +4,7 @@
   "scripts": {
     "build": "next build",
     "build-storybook": "storybook build",
-    "check-code": "run-p -c lint spell-check",
+    "check-code": "run-p -c lint spell-check type-check",
     "dev": "npm-run-all \"gen:*\" -p \"watch:*\"",
     "fix": "run-p -c \"fix:*\"",
     "fix:eslint-other-than-src": "eslint -c ./eslint.config.other-than-src.mjs \"./{,.storybook/}*{js,ts,mjs,mts,cjs,cts}\" --max-warnings 0 --fix",
