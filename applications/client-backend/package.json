@@ -2,7 +2,7 @@
   "name": "client-backend",
   "version": "1.0.0",
   "scripts": {
-    "check-code": "run-p -c lint spell-check",
+    "check-code": "npm-run-all -c -p lint spell-check -s test",
     "dev": "tsx watch src/index.ts",
     "fix": "run-p -c \"fix:*\"",
     "fix:eslint-other-than-src": "eslint -c ./eslint.config.other-than-src.mjs \"./{,.storybook/}*{js,ts,mjs,mts,cjs,cts}\" --max-warnings 0 --fix",
