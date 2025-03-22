@@ -22,7 +22,7 @@
     "lint:prettier": "prettier \"./*.{json,toml,yaml,yml}\" \"!pnpm-lock.yaml\" \"!package.json\" -c -u",
     "prepare": "run-p \"prepare:*\"",
     "prepare:gen": "run-p \"gen:*\"",
-    "spell-check": "cspell lint --no-progress \"./**/*.{js,mjs,cjs}\" \"./*.{js,mjs,cjs}\"",
+    "spell-check": "cspell lint --no-progress \"./**/*.{js,mjs,cjs,ts,tsx}\" \"./*.{js,mjs,cjs}\"",
     "start": "next start",
     "storybook": "storybook dev -p 3050",
     "test": "run-s \"test:*\"",
