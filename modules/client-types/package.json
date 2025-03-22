@@ -1,5 +1,5 @@
 {
-  "name": "common-types",
+  "name": "client-types",
   "version": "1.0.0",
   "scripts": {
     "fix": "run-p -c \"fix:*\"",
