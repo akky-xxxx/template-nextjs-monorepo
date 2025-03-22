@@ -286,6 +286,9 @@ importers:
 
   modules/client-types:
     devDependencies:
+      '@types/react':
+        specifier: 19.0.10
+        version: 19.0.10
       cspell:
         specifier: 8.17.5
         version: 8.17.5
