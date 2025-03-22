@@ -1,6 +1,7 @@
 {
   "name": "client-types",
   "version": "1.0.0",
+  "main": "./src",
   "scripts": {
     "fix": "run-p -c \"fix:*\"",
     "fix:eslint-other-than-src": "eslint -c ./eslint.config.other-than-src.mjs \"./{,.storybook/}*{js,ts,mjs,mts,cjs,cts}\" --max-warnings 0 --fix",
