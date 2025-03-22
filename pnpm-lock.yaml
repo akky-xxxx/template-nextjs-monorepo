@@ -57,9 +57,6 @@ importers:
         specifier: 3.24.2
         version: 3.24.2
     devDependencies:
-      '@tsconfig/node-ts':
-        specifier: 23.6.0
-        version: 23.6.0
       '@tsconfig/node22':
         specifier: 22.0.0
         version: 22.0.0
@@ -2053,9 +2050,6 @@ packages:
 
   '@tsconfig/next@2.0.3':
     resolution: {integrity: sha512-b4aKvmdWnv9aUy+NStUFlefirk3SItW20OJtbi5/ue9oMRaQtUYbN5zsr7OmV3rlx6Gp6h7A82gPoCXhrNGVPQ==}
-
-  '@tsconfig/node-ts@23.6.0':
-    resolution: {integrity: sha512-xkDNA9OdfKpwaVGougAf3vX+E6JHFO0mW2/eiJ7Ef72K21hNvoMlrzf0F87lrip0km4E6a3WceuXqfiXB255iQ==}
 
   '@tsconfig/node22@22.0.0':
     resolution: {integrity: sha512-twLQ77zevtxobBOD4ToAtVmuYrpeYUh3qh+TEp+08IWhpsrIflVHqQ1F1CiPxQGL7doCdBIOOCF+1Tm833faNg==}
@@ -8557,8 +8551,6 @@ snapshots:
   '@tootallnate/once@2.0.0': {}
 
   '@tsconfig/next@2.0.3': {}
-
-  '@tsconfig/node-ts@23.6.0': {}
 
   '@tsconfig/node22@22.0.0': {}
 

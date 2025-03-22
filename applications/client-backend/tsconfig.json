@@ -1,5 +1,5 @@
 {
-  "extends": ["@tsconfig/strictest", "@tsconfig/node-ts", "@tsconfig/node22"],
+  "extends": ["@tsconfig/strictest", "@tsconfig/node22"],
   "compilerOptions": {
     "downlevelIteration": true,
     "noEmit": true,
