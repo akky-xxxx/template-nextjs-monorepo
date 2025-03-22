@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "check-code": "run-p -c lint spell-check",
+    "dev": "tsx watch src/index.ts",
     "fix": "run-p -c \"fix:*\"",
     "fix:eslint-other-than-src": "eslint -c ./eslint.config.other-than-src.mjs \"./{,.storybook/}*{js,ts,mjs,mts,cjs,cts}\" --max-warnings 0 --fix",
     "fix:eslint-src": "eslint \"./src/\" --max-warnings 0 --fix",
@@ -38,6 +39,10 @@
     "orval": "7.7.0",
     "prettier": "3.5.3",
     "template-nextjs-monorepo": "workspace:*",
+    "tsx": "4.19.3",
     "typescript": "5.8.2"
+  },
+  "dependencies": {
+    "fastify": "5.2.1"
   }
 }
