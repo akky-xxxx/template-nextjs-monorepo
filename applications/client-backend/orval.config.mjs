@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   "client-backend": {
     input: "../../documents/openapi/dist/client-backend.yaml",
     output: {
