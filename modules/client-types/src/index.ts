@@ -1,1 +1,1 @@
-export type { FcWithChildren } from "@/FcWithChildren"
+export type { FcWithChildren } from "./FcWithChildren"
