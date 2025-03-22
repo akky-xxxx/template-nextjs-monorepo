@@ -9,5 +9,25 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.6.3"
+  "packageManager": "pnpm@10.6.3",
+  "dependencies": {
+    "react": "19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.0.10",
+    "client-types": "workspace:*",
+    "cspell": "8.17.5",
+    "eslint": "9.22.0",
+    "eslint-config-sc-all": "0.1.1",
+    "eslint-config-sc-react": "0.1.1",
+    "eslint-config-sc-ts": "0.1.1",
+    "eslint-plugin-storybook": "0.11.6",
+    "fixpack": "4.0.0",
+    "happy-css-modules": "3.2.0",
+    "npm-run-all2": "7.0.2",
+    "postcss": "8.5.3",
+    "prettier": "3.5.3",
+    "template-nextjs-monorepo": "workspace:*",
+    "typescript": "5.8.2"
+  }
 }
