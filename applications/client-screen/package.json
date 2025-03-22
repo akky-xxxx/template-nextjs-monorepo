@@ -82,6 +82,7 @@
     "vitest": "3.0.9",
     "whatwg-fetch": "3.6.20"
   },
+  "license": "UNLICENSED",
   "msw": {
     "workerDirectory": [
       "public"
@@ -90,6 +91,5 @@
   "overrides": {
     "msw": "2.5.2"
   },
-  "license": "UNLICENSED",
   "private": true
 }
