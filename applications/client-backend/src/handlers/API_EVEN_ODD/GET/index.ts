@@ -2,21 +2,16 @@ import type { Handlers } from "@/handlers/types/Handlers"
 import type { operations } from "@/libs/apiSchema/client-backend"
 import type { CustomRouteHandlerMethod } from "@/shared/types/CustomRouteHandlerMethod"
 import type { Endpoints } from "@/shared/types/Endpoints"
+import type { QuerySelector } from "@/shared/types/QuerySelector"
+import type { RequestData } from "@/shared/types/RequestData"
+import type { ResponseSelector } from "@/shared/types/ResponseSelector"
 
-type ThisQuery = operations["get-api-be-even-odd"]["parameters"]["query"]
-type Response = operations["get-api-be-even-odd"]["responses"]["200"]["content"]["application/json"]
+type Endpoint = Extract<keyof operations, "get-api-be-even-odd">
 
-type RequestData<H, B, P, Q> = {
-  // fastify の定義に則ってる
-  /* eslint-disable @typescript-eslint/naming-convention */
-  Body?: Partial<B>
-  Headers?: Partial<H>
-  Params?: Partial<P>
-  Querystring?: Partial<Q>
-  /* eslint-enable @typescript-eslint/naming-convention */
-}
+type Query = QuerySelector<Endpoint>
+type Response = ResponseSelector<Endpoint>
 
-const handler: CustomRouteHandlerMethod<RequestData<never, never, never, ThisQuery>, Response> = (
+const handler: CustomRouteHandlerMethod<RequestData<never, never, never, Query>, Response> = (
   request,
   reply,
 ) => {
