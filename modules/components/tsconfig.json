@@ -1,0 +1,11 @@
+{
+  "extends": ["@tsconfig/strictest", "@tsconfig/vite-react"],
+  "compilerOptions": {
+    "downlevelIteration": true,
+    "target": "ES2017"
+  },
+  "include": [
+    "**/*.tsx",
+  ],
+  "exclude": ["node_modules"]
+}
