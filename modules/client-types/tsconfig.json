@@ -3,6 +3,7 @@
   "compilerOptions": {
     "downlevelIteration": true,
     "module": "NodeNext",
+    "noEmit": true,
     "target": "ES2017"
   },
   "include": ["**/*.ts"],
