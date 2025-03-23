@@ -1,7 +1,6 @@
 {
   "name": "components",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "build-storybook": "storybook build",
@@ -23,10 +22,6 @@
     "storybook": "storybook dev -p 4000",
     "type-check": "tsc"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.6.3",
   "dependencies": {
     "react": "19.0.0"
   },
@@ -61,5 +56,10 @@
     "template-nextjs-monorepo": "workspace:*",
     "typescript": "5.8.2",
     "vitest": "3.0.9"
-  }
+  },
+  "license": "ISC",
+  "author": "",
+  "description": "",
+  "keywords": [],
+  "packageManager": "pnpm@10.6.3"
 }

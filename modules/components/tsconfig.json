@@ -4,8 +4,6 @@
     "downlevelIteration": true,
     "target": "ES2017"
   },
-  "include": [
-    "**/*.tsx",
-  ],
+  "include": ["**/*.tsx"],
   "exclude": ["node_modules"]
 }
